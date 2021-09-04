@@ -1,0 +1,22 @@
+<mat-toolbar color="primary" class="toolbar">
+  <span class="container">
+    <img class="logo-itau" src="/assets/svg/logo-ibba.svg">
+
+    <span class="example-spacer"></span>
+
+    <button mat-icon-button class="example-icon favorite-icon idioma" aria-label="Example icon-button with heart icon">
+      PT
+    </button>
+    <div class="base-user">
+      <div class="img-user"></div>
+      <div class="data-user">
+        <p><b>{{ usuario }}</b></p>
+        <p>{{ nivel }}</p>
+      </div>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon class="expand-icon" aria-hidden="false" aria-label="Example home icon">expand_more</mat-icon>
+      </button>
+    </div>
+
+  </span>
+</mat-toolbar>
