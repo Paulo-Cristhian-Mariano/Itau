@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { PoloRoutingModule } from './polo-routing.module';
 import { PolosComponent } from './pages/polos/polos.component';
 import { PoloDetalhesComponent } from './pages/polo-detalhes/polo-detalhes.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { MaterialModule } from 'src/app/material.module';
 
 
 @NgModule({
@@ -13,7 +15,13 @@ import { PoloDetalhesComponent } from './pages/polo-detalhes/polo-detalhes.compo
   ],
   imports: [
     CommonModule,
-    PoloRoutingModule
+    PoloRoutingModule,
+    SharedModule,
+    MaterialModule,
+  ],
+  exports: [
+    // PolosComponent,
+    // PoloDetalhesComponent
   ]
 })
 export class PoloModule { }
