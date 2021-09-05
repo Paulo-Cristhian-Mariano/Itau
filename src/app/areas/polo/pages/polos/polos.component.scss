@@ -1,0 +1,31 @@
+.container{
+    .head-polo{
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        .example-spacer {
+            flex: 1 1 auto;
+        }
+        .titles{
+            font-size: 26px;
+            font-weight: 100;
+            p, h1{
+                font-family: dubai;
+            }
+            h1{
+                margin-bottom: 2px;
+            }
+            b{
+                font-size: 40px;
+            }
+        }
+        .inp-pesquisar{
+            height: 40px;
+            width: 310px;
+            border-radius: 5px;
+            border: 1px solid rgba(0,0,0,0.2);
+            padding-left: 15px;
+        }    
+    }
+}
+
