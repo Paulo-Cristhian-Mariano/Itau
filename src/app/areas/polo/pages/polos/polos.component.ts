@@ -1,7 +1,6 @@
-import { AfterContentInit, AfterViewInit, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ConsultasService } from 'src/app/services/consultas.service';
 import { IBusiness } from 'src/app/areas/polo/interfaces/IBusiness';
-import { Subscriber } from 'rxjs';
 
 @Component({
   selector: 'app-polos',

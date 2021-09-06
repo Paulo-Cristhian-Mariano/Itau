@@ -5,11 +5,15 @@ import { MaterialModule } from '../material.module';
 import { TableComponent } from './table/table.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { CepPipe } from './pipes/cep.pipe';
+import { CnpjPipe } from './pipes/cnpj.pipe';
 
 @NgModule({
   declarations: [
     ToolbarComponent,
-    TableComponent
+    TableComponent,
+    CepPipe,
+    CnpjPipe
   ],
   imports: [
     CommonModule,
@@ -19,7 +23,9 @@ import { FormsModule } from '@angular/forms';
   ],
   exports: [
     ToolbarComponent,
-    TableComponent
+    TableComponent,
+    CepPipe,
+    CnpjPipe
   ]
 })
 export class SharedModule { }

@@ -6,6 +6,7 @@ import { PolosComponent } from './pages/polos/polos.component';
 import { PoloDetalhesComponent } from './pages/polo-detalhes/polo-detalhes.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { MaterialModule } from 'src/app/material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,6 +19,8 @@ import { MaterialModule } from 'src/app/material.module';
     PoloRoutingModule,
     SharedModule,
     MaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
   ]

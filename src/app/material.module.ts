@@ -11,6 +11,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSortModule } from '@angular/material/sort';
+import { MatOptionModule } from '@angular/material/core';
+
 
 const modules = [
   MatButtonModule,
@@ -23,7 +25,8 @@ const modules = [
   MatPaginatorModule,
   MatInputModule,
   MatFormFieldModule,
-  MatSortModule
+  MatSortModule,
+  MatOptionModule
 ]
 
 @NgModule({

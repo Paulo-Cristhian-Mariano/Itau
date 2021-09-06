@@ -19,7 +19,7 @@ export class ConsultasService<Tipo> {
     return this._http.get<Tipo[]>(environment.urlApi + local)
   }
 
-  getByID(local: string, id: number): Observable<Tipo> {
+  getByID(local: string, id: string): Observable<Tipo> {
     return this._http.get<Tipo>(`${environment.urlApi}${local}/${id}`)
   }
 

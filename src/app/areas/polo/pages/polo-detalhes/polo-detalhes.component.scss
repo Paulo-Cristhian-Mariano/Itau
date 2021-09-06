@@ -1,0 +1,24 @@
+.container{
+    .head-polo{
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        .titles{
+            font-size: 26px;
+            font-weight: 100;
+            p, h1{
+                font-family: dubai;
+            }
+            h1{
+                margin-bottom: 2px;
+            }
+            b{
+                font-size: 40px;
+            }
+        }
+    }
+    .content-polo{
+        margin-top: 20px;
+        padding-bottom: 50px;
+    }
+}

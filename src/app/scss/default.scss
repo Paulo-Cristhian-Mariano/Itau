@@ -1,7 +1,6 @@
 .dn{
     display: none !important;
 }
-
 .container {
     max-width: fit-content;
     width: 100%;
@@ -16,6 +15,9 @@
     margin-right: 0px;
     margin-left: 0px;
     max-width: 540px;
+}
+.pointer{
+    cursor: pointer;
 }
 
 @media (min-width: 576px){

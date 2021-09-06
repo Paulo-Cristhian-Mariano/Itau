@@ -1,1 +1,75 @@
-<p>polo-detalhes works!</p>
+<div class="container">
+    <div class="head-polo">
+        <div class="titles">
+            <h1><b>Polo {{ retornoPolo != undefined ? retornoPolo.name: "" }}</b></h1>
+            <p>exibindo detalhes do polo {{ retornoPolo != undefined ? retornoPolo.name: "" }} #{{ retornoPolo !=
+                undefined ? retornoPolo.id: "" }}</p>
+        </div>
+    </div>
+    <div class="content-polo">
+
+        <div [formGroup]='formEndereco'>
+            <h3>Detalhes do endereço</h3>
+
+            <mat-form-field class="inp" appearance="outline">
+                <mat-label>CEP</mat-label>
+                <input matInput formControlName="cep">
+            </mat-form-field>
+
+            <mat-form-field class="inp" appearance="outline">
+                <mat-label>Nome da Rua</mat-label>
+                <input matInput formControlName="rua">
+            </mat-form-field>
+
+            <mat-form-field class="inp" appearance="outline">
+                <mat-label>Bairro</mat-label>
+                <input matInput formControlName="bairro">
+            </mat-form-field>
+
+            <mat-form-field class="inp" appearance="outline">
+                <mat-label>Estado</mat-label>
+                <input matInput formControlName="estado">
+            </mat-form-field>
+
+            <mat-form-field class="inp" appearance="outline">
+                <mat-label>Cidade</mat-label>
+                <input matInput formControlName="cidade">
+            </mat-form-field>
+
+        </div>
+        <div [formGroup]='formEmpresa'>
+            <h3>Detalhes da empresa</h3>
+
+            <mat-form-field class="inp" appearance="outline">
+                <mat-label>Nome</mat-label>
+                <input matInput formControlName="name">
+            </mat-form-field>
+
+            <mat-form-field class="inp" appearance="outline">
+                <mat-label>Business</mat-label>
+                <input matInput formControlName="business">
+            </mat-form-field>
+
+            <mat-form-field class="inp" appearance="outline">
+                <mat-label>valuation</mat-label>
+                <input matInput formControlName="valuation">
+            </mat-form-field>
+
+            <mat-form-field class="inp" appearance="outline">
+                <mat-label>CNPJ</mat-label>
+                <input matInput formControlName="cnpj">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Ativo?</mat-label>
+                <select matNativeControl formControlName="active">
+                  <option value="true">Sim</option>
+                  <option value="false">Não</option>
+                </select>
+              </mat-form-field>
+        </div>
+
+        <button mat-raised-button>Voltar</button>
+        <button mat-raised-button color="warn">Salvar</button>
+    </div>
+</div>

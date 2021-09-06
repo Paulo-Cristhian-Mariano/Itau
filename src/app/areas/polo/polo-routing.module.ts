@@ -9,7 +9,7 @@ const routes: Routes = [
     component: PolosComponent
   },
   {
-    path: 'detalhes',
+    path: 'detalhes/:id',
     component: PoloDetalhesComponent
   },
   {
