@@ -1,6 +1,7 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterContentInit, AfterViewInit, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { ConsultasService } from 'src/app/services/consultas.service';
-import { IBusiness } from '../../interfaces/ibusiness';
+import { IBusiness } from 'src/app/areas/polo/interfaces/IBusiness';
+import { Subscriber } from 'rxjs';
 
 @Component({
   selector: 'app-polos',
@@ -10,16 +11,25 @@ import { IBusiness } from '../../interfaces/ibusiness';
 export class PolosComponent implements OnInit, OnDestroy {
 
   public polos: any;
-  constructor(private _consultas: ConsultasService<IBusiness[]>) { }
+  public retornoPolos: IBusiness[] = [];
+  public inpText!: Event;
 
-  ngOnInit(): void{
-    this.polos = this._consultas.get("itau_teste").subscribe((data) => {
+  constructor(
+    private _consultas: ConsultasService<IBusiness>,
+  ) { }
+
+  ngOnInit(): void {
+    this.polos = this._consultas.get("itau_teste").subscribe((data: IBusiness[]) => {
       console.log(data)
+      this.retornoPolos = data
     })
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.polos.unsubscribe()
   }
 
+  search(param: any){
+    this.inpText = param
+  }
 }

@@ -20,8 +20,6 @@ import { MaterialModule } from 'src/app/material.module';
     MaterialModule,
   ],
   exports: [
-    // PolosComponent,
-    // PoloDetalhesComponent
   ]
 })
 export class PoloModule { }

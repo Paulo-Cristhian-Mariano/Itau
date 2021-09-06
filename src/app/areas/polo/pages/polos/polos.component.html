@@ -4,9 +4,17 @@
             <h1><b>Polos Itaú</b></h1>
             <p>confira abaixo alguns dos principais polos do itaú</p>
         </div>
+
         <span class="example-spacer"></span>
-        <input  class="inp-pesquisar" placeholder="Pesquisar...">
+
+        <mat-form-field class="inp-busca" appearance="outline">
+            <mat-label>Pesquisar...</mat-label>
+            <input matInput (keyup)="search($event)">
+        </mat-form-field>
     </div>
-    
-    
+    <div class="content-polo">
+        <app-table *ngIf="retornoPolos.length" [search]="inpText" [conteudoTabela]="retornoPolos"
+            [displayedColumns]="['name', 'business', 'valuation', 'active', 'acao']">
+        </app-table>
+    </div>
 </div>

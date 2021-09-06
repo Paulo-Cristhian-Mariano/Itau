@@ -3,6 +3,7 @@
         margin-top: 50px;
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         .example-spacer {
             flex: 1 1 auto;
         }
@@ -19,13 +20,20 @@
                 font-size: 40px;
             }
         }
-        .inp-pesquisar{
-            height: 40px;
-            width: 310px;
-            border-radius: 5px;
-            border: 1px solid rgba(0,0,0,0.2);
-            padding-left: 15px;
-        }    
+        .mat-form-field{
+            div{
+                padding-bottom: 0px;
+            }
+        } 
+    }
+    .content-polo{
+        margin-top: 20px;
+        padding-bottom: 50px;
     }
 }
 
+@media (max-width: 768px){
+    .mat-form-field{
+        width: 100%;
+    } 
+}

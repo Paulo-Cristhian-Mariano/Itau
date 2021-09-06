@@ -1,7 +1,11 @@
 @include mat-core();
 
+.inp-busca .mat-form-field-wrapper{
+  padding-bottom: 0px;
+}
+
 $mat-orange-itau: (
-    50: #fee0cd,
+    50: var(--soft-orange),
     100: #ffe0b2,
     200: #ffcc80,
     300: #ffb74d,
@@ -34,9 +38,9 @@ $mat-orange-itau: (
   );
 
 // Itaú theme
-$uni-primary: mat-palette($mat-orange-itau, 50);
-$uni-accent:  mat-palette($mat-amber, A200, A100, A400);
-$uni-warn:    mat-palette($mat-deep-orange);
+$itau-primary: mat-palette($mat-orange-itau, 50);
+$itau-accent:  mat-palette($mat-amber, A200, A100, A400);
+$itau-warn:    mat-palette($mat-deep-orange);
 
-$uni-theme:   mat-dark-theme($uni-primary, $uni-accent, $uni-warn);
-@include angular-material-theme($uni-theme);
+$itau-theme:   mat-light-theme($itau-primary, $itau-accent, $itau-warn);
+@include angular-material-theme($itau-theme);

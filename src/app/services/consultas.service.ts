@@ -4,7 +4,6 @@ import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +13,6 @@ export class ConsultasService<Tipo> {
   constructor(
     private _http: HttpClient,
     private _snackBar: MatSnackBar,
-    private _route: Router
   ) { }
 
   get(local: string): Observable<Tipo[]> {

@@ -2,21 +2,24 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { MaterialModule } from '../material.module';
-
-const shared = [
-  ToolbarComponent
-]
+import { TableComponent } from './table/table.component';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    shared
+    ToolbarComponent,
+    TableComponent
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule,
+    FormsModule
   ],
   exports: [
-    shared
+    ToolbarComponent,
+    TableComponent
   ]
 })
 export class SharedModule { }
