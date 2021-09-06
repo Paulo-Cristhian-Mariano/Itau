@@ -7,13 +7,15 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CepPipe } from './pipes/cep.pipe';
 import { CnpjPipe } from './pipes/cnpj.pipe';
+import { CepComponent } from './cep/cep.component';
 
 @NgModule({
   declarations: [
     ToolbarComponent,
     TableComponent,
     CepPipe,
-    CnpjPipe
+    CnpjPipe,
+    CepComponent
   ],
   imports: [
     CommonModule,
@@ -24,6 +26,7 @@ import { CnpjPipe } from './pipes/cnpj.pipe';
   exports: [
     ToolbarComponent,
     TableComponent,
+    CepComponent,
     CepPipe,
     CnpjPipe
   ]

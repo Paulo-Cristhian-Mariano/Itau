@@ -4,6 +4,7 @@ import { IBusiness } from 'src/app/areas/polo/interfaces/IBusiness';
 import { ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ɵallowPreviousPlayerStylesMerge } from '@angular/animations/browser';
+import { ConditionalExpr } from '@angular/compiler';
 
 @Component({
   selector: 'app-polo-detalhes',
@@ -15,7 +16,7 @@ export class PoloDetalhesComponent implements OnInit {
   public polo: any;
   public retornoPolo!: IBusiness;
   public idReq!: string
-teste: any = ""
+  teste: any = ""
   public formEndereco!: FormGroup;
   public formEmpresa!: FormGroup;
 
@@ -43,12 +44,12 @@ teste: any = ""
       cnpj: [null],
       active: [null]
     })
-    
+
   }
 
-  request(){
+  request() {
     let id = this.route.snapshot.paramMap.get("id")
-    id != null ? this.idReq = id:null;
+    id != null ? this.idReq = id : null;
 
     this.polo = this._consultas.getByID("itau_teste", this.idReq).subscribe((data: IBusiness) => {
       console.log(data)
@@ -58,7 +59,7 @@ teste: any = ""
     })
   }
 
-  popular(data: IBusiness){
+  popular(data: IBusiness) {
     this.formEmpresa = this.formBuilder.group({
       name: [data.name, Validators.required],
       business: [data.business],
@@ -66,6 +67,23 @@ teste: any = ""
       cnpj: [data.cnpj],
       active: [data.active]
     })
+  }
+
+  endereco(data: any) {
+    console.log(data)
+
+    this.formEndereco = this.formBuilder.group({
+      cep: [data.cep, Validators.required],
+      rua: [data.logradouro],
+      bairro: [data.bairro],
+      estado: [data.uf],
+      cidade: [data.localidade]
+    })
+  }
+
+  submeter(){
+    console.log(this.formEndereco.value)
+    console.log(this.formEndereco.value)
   }
 
 }

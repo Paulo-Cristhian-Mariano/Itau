@@ -8,13 +8,12 @@
     </div>
     <div class="content-polo">
 
+        
+
         <div [formGroup]='formEndereco'>
             <h3>Detalhes do endereço</h3>
 
-            <mat-form-field class="inp" appearance="outline">
-                <mat-label>CEP</mat-label>
-                <input matInput formControlName="cep">
-            </mat-form-field>
+            <app-cep (endereco)="endereco($event)"></app-cep>
 
             <mat-form-field class="inp" appearance="outline">
                 <mat-label>Nome da Rua</mat-label>
@@ -57,7 +56,7 @@
 
             <mat-form-field class="inp" appearance="outline">
                 <mat-label>CNPJ</mat-label>
-                <input matInput formControlName="cnpj">
+                <input matInput formControlName="cnpj" >
             </mat-form-field>
 
             <mat-form-field appearance="outline">
@@ -70,6 +69,6 @@
         </div>
 
         <button mat-raised-button>Voltar</button>
-        <button mat-raised-button color="warn">Salvar</button>
+        <button mat-raised-button color="warn" (click)="submeter()" >Salvar</button>
     </div>
 </div>

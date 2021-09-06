@@ -15,6 +15,10 @@ export class ConsultasService<Tipo> {
     private _snackBar: MatSnackBar,
   ) { }
 
+  getCep(cep: string): Observable<Tipo> {
+    return this._http.get<Tipo>(`https://viacep.com.br/ws/${cep}/json`)
+  }
+
   get(local: string): Observable<Tipo[]> {
     return this._http.get<Tipo[]>(environment.urlApi + local)
   }
