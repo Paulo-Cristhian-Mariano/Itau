@@ -1,0 +1,36 @@
+.container{
+    .head-polo{
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        .example-spacer {
+            flex: 1 1 auto;
+        }
+        .titles{
+            font-size: 26px;
+            font-weight: 100;
+            h1{
+                margin-bottom: 2px;
+            }
+            b{
+                font-size: 40px;
+            }
+        }
+        .mat-form-field{
+            div{
+                padding-bottom: 0px;
+            }
+        } 
+    }
+    .content-polo{
+        margin-top: 20px;
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 768px){
+    .mat-form-field{
+        width: 100%;
+    } 
+}

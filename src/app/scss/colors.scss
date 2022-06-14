@@ -1,0 +1,24 @@
+// Tema claro
+$hard-orange: #F47929;
+$soft-orange: #FEE0CD;
+$first-green: #89C767;
+$first-red: #F37574;
+
+// Tema escuro
+$hard-orange-dark: #c56322;
+$soft-orange-dark: #b9a395;
+$first-green-dark: #5e8b46;
+$first-red-dark: #9e4949;
+
+:root{
+    --hard-orange: #{$hard-orange};
+    --soft-orange: #{$soft-orange};
+    --first-green: #{$first-green};
+    --first-red: #{$first-red};
+}
+.dark{
+    --hard-orange: #{$hard-orange-dark};
+    --soft-orange: #{$soft-orange-dark};
+    --first-green: #{$first-green-dark};
+    --first-red: #{$first-red-dark};
+}
